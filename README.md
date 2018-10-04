@@ -11,6 +11,8 @@ docker-compose -f docker-compose.yml up -d
 
 edit 3 files.
 create cryptoconfig files.
+
+create channel
 ```
 docker exec -e "CORE_PEER_LOCALMSPID=SellerMSP" -e "CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/Seller.market.com/users/Admin@Seller.market.com/msp" cli peer channel create -o orderer.market.com:7050 -c channel -f /etc/hyperledger/configtx/channel.tx
 ```
