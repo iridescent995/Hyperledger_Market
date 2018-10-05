@@ -32,3 +32,9 @@ attach cc to peer and compile it
 ```
 docker exec -e "CORE_PEER_LOCALMSPID=SellerMSP" -e "CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/Seller.market.com/users/Admin@Seller.market.com/msp" -e "CORE_PEER_ADDRESS=peer0.Seller.market.com:7051" -e "CORE_PEER_ID=cli" cli peer chaincode install -n market-network -v 1.0 -l golang -p github.com/basic-marketplace-cc/go
 ```
+
+
+```
+docker exec -it peer0.Seller.market.com bash
+env
+```
